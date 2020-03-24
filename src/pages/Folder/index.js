@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import Loader from "react-loader-spinner"
 import Modal from "react-awesome-modal"
-import { MdCreateNewFolder, MdAddCircle } from "react-icons/md"
+import { MdCreateNewFolder, MdAddCircle, MdArrowBack } from "react-icons/md"
 import { toast } from 'react-toastify';
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 import schoolBooks from "../../assets/illustrations/schoolbooks-colour.svg"
 import student from "../../assets/illustrations/choices-colour.svg"
 import api from '../../services/api'
@@ -15,20 +15,22 @@ import {
   ButtonContainer,
   FormContainer,
   ListContainer,
-  StudentIcon
+  StudentIcon,
+  Breadcrumbs
 } from './styles'
 
 import List from "../../components/List"
 
-export default function Folder(props) {
+export default function Folder({ location }) {
   let currentFolderName;
   try {
-    currentFolderName = props.location.state.currentName
+    currentFolderName = location.state.currentName
   } catch {
   }
   const emoji = ":("
 
   const { id } = useParams()
+  const history = useHistory()
   const [subFolders, setSubFolders] = useState([])
   const [files, setFiles] = useState([])
   const [loading, setLoading] = useState(true)
@@ -110,7 +112,6 @@ export default function Folder(props) {
   }
 
   function formatTitle() {
-    console.log(currentFolderName)
     if (currentFolderName !== undefined) {
       const splitedNames = currentFolderName.split("/")
       splitedNames.shift() // removing first undefined
@@ -161,7 +162,10 @@ export default function Folder(props) {
         <StudentIcon src={schoolBooks}></StudentIcon>
         <ListContainer>
           <CoursesList>
-            <h4>{formatTitle()}</h4>
+            <Breadcrumbs>
+              <MdArrowBack size={20} onClick={() => history.goBack()}/>
+              <h4>{formatTitle()}</h4>
+            </Breadcrumbs>
             {loading && 
               <Loader
                 type="TailSpin"

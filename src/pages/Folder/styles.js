@@ -39,14 +39,33 @@ export const CoursesList = styled.ul`
   margin-bottom: 30px;
   height: 100%;
   width: 800px;
+`;
+
+export const Breadcrumbs = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
 
   h4 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     margin: 25px;
     font-style: italic;
   }
-`;
+
+  svg {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+    width: 150px;
+  }
+`
 
 export const Button = styled.button`
   border-radius: 5px;
