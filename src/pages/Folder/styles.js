@@ -77,6 +77,7 @@ export const Button = styled.button`
   box-shadow: 10px 10px 10px #ddd;
 
   p {
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: bold;
     display: flex;

@@ -12,7 +12,7 @@ export default createGlobalStyle`
     background-color: #eeeeee;
   }
   body {
-    font: 14px 'Roboto', sans-serif;
+    font: 14px 'Montserrat', sans-serif;
     color: #333;
     -webkit-font-smoothing: antialiased !important;
   }
