@@ -18,7 +18,7 @@ export default function ListItem({ data, type, parentFolderName, index }) {
         </Container>
       </StyledLink>
     ) : (
-      <StyledA target="_blank" href={`http://localhost:4000/files/${data.file_url}`}>
+      <StyledA target="_blank" href={`https://viniciusroland.tech/api/files/${data.file_url}`}>
         <Container>
           <MdAttachFile />
           <h3>{data.name}</h3>
