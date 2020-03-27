@@ -29,6 +29,7 @@ export const WelcomeMessage = styled.div`
 
   @media (max-width: 530px) {
     h1 {
+      font-size: 35px;
       text-align: center;
       margin-left: 30px;
       margin-right: 30px;
@@ -38,7 +39,8 @@ export const WelcomeMessage = styled.div`
     }
      
     .welcome3 {
-      display: none;
+      font-size: 14px;
+      text-align: center;
     }
   }
 `
