@@ -113,6 +113,8 @@ export const Input = styled.input`
 `
 
 export const FormContainer = styled.form`
+  margin-left: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

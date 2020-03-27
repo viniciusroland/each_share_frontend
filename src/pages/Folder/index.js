@@ -125,7 +125,7 @@ export default function Folder({ location }) {
     <>
       <Modal visible={showAddFolderModal} width="400" height="300" effect="fadeInUp" onClickAway={() => setShowAddFolderModal(false)}>
         <FormContainer onSubmit={handleCreateFolder}>
-          <h2>digite um nome para sua pastinha</h2>
+          <h3>digite um nome para sua pasta</h3>
           <Input
             placeholder="e.g Provas, Resumo, Teoria"
             onChange={(e) => setFolderName(e.target.value)}
@@ -139,7 +139,7 @@ export default function Folder({ location }) {
       
       <Modal visible={showAddFileModal} width="400" height="300" effect="fadeInUp" onClickAway={() => setShowAddFileModal(false)}>
         <FormContainer onSubmit={handleCreateFile}>
-          <h2>digite um nome para seu arquivo</h2>
+          <h3>digite um nome para seu arquivo</h3>
           <Input
             placeholder="e.g calculo_p1.pdf, resumo_prof.pdf"
             onChange={(e) => setFileName(e.target.value)}
