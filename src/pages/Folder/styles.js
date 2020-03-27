@@ -28,6 +28,10 @@ export const Container = styled.div`
 export const StudentIcon = styled.img`
   height: 250px;
   margin: 10px;
+
+  @media (max-width: 600px) {
+    height: 200px;
+  }
 `
 
 export const CoursesList = styled.ul`
@@ -63,7 +67,7 @@ export const Breadcrumbs = styled.div`
 
   @media (max-width: 630px) {
     flex-direction: column;
-    width: 150px;
+    width: 360px;
   }
 `
 
