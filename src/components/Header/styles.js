@@ -8,6 +8,7 @@ const rotateAnimation = keyframes`
   }
 `
 export const Container = styled.header`
+  padding: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
