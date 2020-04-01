@@ -127,8 +127,8 @@ export default function Folder({ location }) {
         <FormContainer onSubmit={handleCreateFolder}>
           <h3>digite um nome para sua pasta</h3>
           <Input
-            placeholder="e.g Provas, Resumo, Teoria"
-            onChange={(e) => setFolderName(e.target.value)}
+            placeholder="provas, resumo, calculo II"
+            onChange={(e) => setFolderName(e.target.value.toLowerCase())}
             value={folderName}
           />
           <Button>
@@ -141,8 +141,8 @@ export default function Folder({ location }) {
         <FormContainer onSubmit={handleCreateFile}>
           <h3>digite um nome para seu arquivo</h3>
           <Input
-            placeholder="e.g calculo_p1.pdf, resumo_prof.pdf"
-            onChange={(e) => setFileName(e.target.value)}
+            placeholder="calculo_p1.pdf, resumo_prof.pdf"
+            onChange={(e) => setFileName(e.target.value.toLowerCase())}
             value={fileName}
           />
           <div htmlFor="file-input">
