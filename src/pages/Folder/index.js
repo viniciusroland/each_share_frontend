@@ -131,7 +131,7 @@ export default function Folder({ location }) {
             onChange={(e) => setFolderName(e.target.value.toLowerCase())}
             value={folderName}
           />
-          <Button>
+          <Button disabled={folderName === ""}>
             <p>ok !</p>
           </Button>
         </FormContainer>
@@ -147,12 +147,12 @@ export default function Folder({ location }) {
           />
           <div htmlFor="file-input">
             <label htmlFor="file-input">
-              <p>escolher arquivo</p>
+              <h3>escolher arquivo</h3>
             </label>
-            <MdAddCircle size={20} />
+            <MdAddCircle size={16} />
           </div>
           <Input id="file-input" type="file" onChange={(e) => setFileToUpload(e.target.files[0])} />
-          <Button>
+          <Button disabled={fileName === "" || fileToUpload === null}>
             <p>ok !</p>
           </Button>
         </FormContainer>

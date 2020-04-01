@@ -94,6 +94,11 @@ export const Button = styled.button`
     background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 300ms;
   }
+  &:disabled {
+    background-color: #ccc;
+    color: #eee;
+    box-shadow: 0px 0px 0px #000;
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -132,7 +137,7 @@ export const FormContainer = styled.form`
     justify-content: space-around;
     height: 50px;
     width: 200px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     border-style: dashed;
   }
 `
