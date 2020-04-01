@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export const StyledA = styled.a`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -17,7 +16,6 @@ export const StyledA = styled.a`
 
 export const StyledLink = styled(Link)`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -48,13 +46,18 @@ export const Container = styled.div`
   animation-fill-mode: backwards;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   width: 70%;
   box-shadow: 1px 1px 2px #888888;
   border-radius: 5px;
   margin: 5px;
   padding: 10px;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
 
   h3 {
     margin-left: 25px;

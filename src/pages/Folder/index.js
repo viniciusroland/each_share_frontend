@@ -101,13 +101,13 @@ export default function Folder({ location }) {
 
   async function showSuccessToast(msg) {
     toast.success(msg, {
-      "position" : "top-right"
+      "position" : "top-center"
     })
   }
 
   async function showErrorToast(msg) {
     toast.error(msg, {
-      "position" : "top-right"
+      "position" : "top-center"
     })
   }
 

@@ -1,6 +1,11 @@
 import React from 'react'
 import { Container, StyledLink, StyledA } from './styles'
-import { MdFolder, MdChevronRight, MdAttachFile } from 'react-icons/md'
+import { 
+  MdFolder,
+  MdChevronRight,
+  MdAttachFile,
+  // MdDelete, MdError 
+} from 'react-icons/md'
 export default function ListItem({ data, type, parentFolderName, index }) {
   return (
     <>
@@ -12,17 +17,21 @@ export default function ListItem({ data, type, parentFolderName, index }) {
         }
       }}>
         <Container index={index}>
-          <MdFolder />
-          <h3>{data.name}</h3>
-          <MdChevronRight />
+          <div>
+            <MdFolder />
+            <h3>{data.name}</h3>
+            <MdChevronRight />
+          </div>
         </Container>
       </StyledLink>
     ) : (
       <StyledA target="_blank" href={`https://viniciusroland.tech/api/files/${data.file_url}`}>
         <Container>
-          <MdAttachFile />
-          <h3>{data.name}</h3>
-          <MdChevronRight />
+          <div>
+            <MdAttachFile />
+            <h3>{data.name}</h3>
+            <MdChevronRight />
+          </div>
         </Container>
       </StyledA >
     )}
