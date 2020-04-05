@@ -4,14 +4,15 @@ import {
   MdFolder,
   MdChevronRight,
   MdAttachFile,
-  // MdDelete, MdError 
 } from 'react-icons/md'
+import { stringToBase64 } from "../../helper/base64"
 export default function ListItem({ data, type, parentFolderName, index }) {
+  const encodedId = stringToBase64(data.id)
   return (
     <>
     {type === "folder" ? (
       <StyledLink to={{
-        pathname: `/${data.id}`,
+        pathname: `/${encodedId}`,
         state: {
           currentName: parentFolderName + `/${data.name}`
         }

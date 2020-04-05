@@ -7,6 +7,7 @@ import { useParams, useHistory } from "react-router-dom"
 import schoolBooks from "../../assets/illustrations/schoolbooks-colour.svg"
 import student from "../../assets/illustrations/choices-colour.svg"
 import api from '../../services/api'
+import { base64ToString } from "../../helper/base64"
 import {
   Container,
   CoursesList,
@@ -26,10 +27,14 @@ export default function Folder({ location }) {
   try {
     currentFolderName = location.state.currentName
   } catch {
+    // pass
   }
   const emoji = ":("
 
-  const { id } = useParams()
+  const routeParams = useParams()
+  const encodedId = routeParams.id
+  const id = base64ToString(encodedId)
+
   const history = useHistory()
   const [subFolders, setSubFolders] = useState([])
   const [files, setFiles] = useState([])
