@@ -1,1 +1,1 @@
-Frontend do https://eashshare.digital
+Frontend do https://eachshare.digital
